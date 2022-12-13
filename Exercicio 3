@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main (void){
+    int salario, ajuste, porc, novosalario;
+    printf("Digite seu salario atual: ");
+    scanf("%d", salario);
+    porc = 0,1;
+    ajuste = salario * porc;
+    novosalario = salario + ajuste;
+    printf("Seu novo salario e: %d", novosalario);
+}
