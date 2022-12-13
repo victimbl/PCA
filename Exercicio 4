@@ -1,0 +1,8 @@
+#include<stdio.h>
+
+int main() {
+    int conta, garcom;
+    printf("Digite o valor da conta: ");
+    scanf("%d", conta);
+    
+}
