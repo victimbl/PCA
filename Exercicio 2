@@ -14,9 +14,11 @@ int main() {
         printf("O %s e Homem", nome);
         gets(nome);
     }
+    
     if (sexo == 2){
         printf("A %s e Mulher", nome);
         gets(nome);
     }
+    
     return 0;
 }
