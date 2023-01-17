@@ -1,33 +1,28 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 
 int numero(){
-    int k;
+    int num;
+    while(num <= 0){
     printf("Digite um numero inteiro positivo: ");
-    scanf("%d", &k);
-    return k;
-}
-
-int hiperfatorial(){
-    int x, y, z, n;
-    x = numero();
-    y = 0, n = 1;
-    for(y; y < x; y++){
-        z = pow(y,y);
-        n = n * z;
-        y++;
+    scanf("%d", num);
     }
-    return n;
+    return num;
 }
 
-int imprimir(){
+int hiperfatorial(int num){
+    int  hpft= 1;
+    for(int i = 1,i <= num, i++){
+        hpft *= pow(i,i);
+    }
+    return hpft;
+}
+
+void saida(){
     int x, y;
-    x = numero(), y = hiperfatorial();
-    printf("O hiperfatorial de %d e %d", x,y);
-}
-
-int main(){
-    int funcao;
-    funcao = imprimir();
-    printf(funcao);
+    x = numero();
+    y = hiperfatorial(num);
+    printf("O hiperfatorial de %d e: %d", x, y);
+    return y;
 }
