@@ -1,8 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(){
-    int alunos = 0, repete = 1; 
-    float nota, maiorn = 0.0, menorn = 10.0, pmedia = 0.0, media;
+    int alunos = 1, repete = 1;
+    float nota, maiorn, menorn, pmedia, media;
+    printf("Digite a nota do aluno: ");
+    scanf("%f", &nota);
+    maiorn = nota;
+    menorn = nota;
+    pmedia = nota;
     while(repete){
         printf("Digite a nota do aluno: ");
         scanf("%f", &nota);
