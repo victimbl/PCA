@@ -5,13 +5,18 @@ void imprimir(){
     int seq[M], qtde;
     printf("Digite  a quantidade de numeros: ");
     scanf("%d", &qtde);
-    for(int i=0; i<qtde; i++){
-        printf("Digite o numero: ");
-        scanf("%d", &seq[i]);
+    if(qtde > 100){
+        printf("O numero digitado tem que ser menor que 100");
     }
-    printf("A sequencia inversa e: ");
-    for(int j=qtde-1; j>=0; j--){
-        printf("%d", seq[j]);
+    else{
+        for(int i=0; i<qtde; i++){
+            printf("Digite o numero: ");
+            scanf("%d", &seq[i]);
+        }
+        printf("A sequencia inversa e: ");
+        for(int j=qtde-1; j>=0; j--){
+            printf("%d", seq[j]);
+        }
     }
 }
 
