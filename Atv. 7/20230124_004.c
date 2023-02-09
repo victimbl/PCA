@@ -11,12 +11,12 @@ void imprimirpares(){
     else{
         for(int j=0; j<n; j++){
             printf("Digite o numero: ");
-            scanf("%d", seq[j]);
+            scanf("%d", &seq[j]);
         }
         printf("Os numeros pares sao: ");
         for(int i=0; i<n; i++){
-            if(seq[i/2] = 0){
-                printf("%d", seq[i]);
+            if(seq[i] % 2 == 0){
+                printf("%d ", seq[i]);
             }
         }
     }
