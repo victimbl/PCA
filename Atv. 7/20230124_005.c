@@ -2,7 +2,7 @@
 #define M 100
 
 void imprimirfat(){
-    int seq[M], n;
+    int seq[M], n, fat;
     int fat = 1;
     printf("Digite a quantida de de numeros: ");
     scanf("%d", &n);
@@ -14,9 +14,9 @@ void imprimirfat(){
             printf("Digite o numero: ");
             scanf("%d", &seq[i]);
         }
-        for(int j=0; n>0; n--){
-            for(int k=0; seq[k]>0; seq[k]-1){
-                fat = fat * seq[k];
+        for(int j=0; i<n; i++){
+            for(int k=n; k>0; k--){
+                
             }
         }
     }
