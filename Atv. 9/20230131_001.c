@@ -24,8 +24,7 @@ void semvogal(char palavra[max]){
             j++;
         }
     }
-    printf("A palavra sem vogais e: ");
-    puts(svogal);
+    printf("A palavra sem vogais e: %s", svogal);
 }
 
 int main(){
