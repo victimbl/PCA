@@ -1,36 +1,32 @@
 #include <stdio.h>
 #include <string.h>
 
-int acrescentar(int notas[2][6], int eqp){
+//Funcao para adicionar um ponto para as alunas de uma equipe
+int acrescentar(char sexo[2][6], int notas[2][6], int eqp){
     int i, j;
     if(eqp == 1){
-        for(i=0; i<2; i++){
-            for(j=0; j<6; j++){
-                if(i==0){
-                    if(notas[i][j] <= 9)
-                        notas[i][j] = notas[i][j] + 1;
-                }
-            }
-        }
+        for(i=0; i<2; i++)
+            for(j=0; j<6; j++)
+                if(i==0)
+                    if(sexo[i][j] == 'F')
+                        if(notas[i][j] <= 9)
+                            notas[i][j] = notas[i][j] + 1;                
     }
     if(eqp == 2){
-        for(i=0; i<2; i++){
-            for(j=0; j<6; j++){
-                if(i==1){
-                    if(notas[i][j] <= 9)
-                        notas[i][j] = notas[i][j] + 1;
-                }
-            }
-        }
+        for(i=0; i<2; i++)
+            for(j=0; j<6; j++)
+                if(i==1)
+                    if(sexo[i][j] == 'F')
+                        if(notas[i][j] <= 9)
+                            notas[i][j] = notas[i][j] + 1;
     }
     printf("\nAs novas notas sao: \n");
-    for(i=0; i<2; i++){
-            for(j=0; j<6; j++){
-                printf("%d ", notas[i][j]);
-            }
-        }
+    for(i=0; i<2; i++)
+        for(j=0; j<6; j++)
+            printf("%d ", notas[i][j]);
 }
 
+//Funcao para adicionar um aluno a uma equipe
 char novo_aluno(char nomes[2][6], char sexo[2][6], int notas[2][6], int eqp){
     char aluno[81], sx;
     int i, j, nt;
@@ -46,10 +42,10 @@ char novo_aluno(char nomes[2][6], char sexo[2][6], int notas[2][6], int eqp){
         strcat(notas, nt);
     }
     if(eqp == 2){
-        strcat(nomes, aluno);
+       strcat(nomes, aluno);
         strcat(sexo, sx);
         strcat(notas, nt);
-    }
+   }
 }
 
 int main(){
@@ -82,5 +78,6 @@ int main(){
             }
         }
     }
-    acrescentar(notas, 2);
+    acrescentar(sexo, notas, 2);
+    novo_aluno(nomes, sexo, notas, 1);
 }
