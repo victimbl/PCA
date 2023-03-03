@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+44
 int main(){
     int prim, seg, tab_multi;
     printf("A tabuada de multiplicacao: ");
