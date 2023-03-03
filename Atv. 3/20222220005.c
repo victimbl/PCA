@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    int num, n_maior, n_menor, cont, neg;
+    int num, n_maior, n_menor, cont;
     printf("Digite um numero entre 1 e 1000: ");
     scanf("%i", &num);
     n_maior = 0;
