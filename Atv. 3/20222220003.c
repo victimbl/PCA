@@ -2,7 +2,7 @@
 
 int main(){
     int i, num, soma;
-    for(i=1; i<=5; i++){
+    for(i=1; i<=50; i++){
         printf("Digite um numero: ");
         scanf("%i", &num);
         if (num > 100 && num < 200){
